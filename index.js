@@ -14,15 +14,15 @@ const updateIndex = async (appId, indexName, filePath, adminKey) => {
 
 module.exports = {
   onSuccess: async (
-    { inputs, constants: { PUBLISH_DIR }, netlifyConfig, utils },
+    { inputs, constants: { PUBLISH_DIR }, utils },
   ) => {
-    console.log(netlifyConfig);
-    // if (context !== "production") {
-    //   console.log(`Skipping Algolia index refresh (context is ${context})`);
-    //   return;
-    // }
+    const { ALGOLIA_ADMIN_KEY, CONTEXT } = process.env;
 
-    const { ALGOLIA_ADMIN_KEY } = process.env;
+    if (CONTEXT !== "production") {
+      console.log(`Skipping Algolia index refresh (context is ${context})`);
+      return;
+    }
+
     const { appId, indexName, filePath } = inputs;
 
     if (!ALGOLIA_ADMIN_KEY) {
