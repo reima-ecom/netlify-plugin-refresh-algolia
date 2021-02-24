@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.1](https://www.github.com/reima-ecom/netlify-plugin-refresh-algolia/compare/v1.0.0...v1.0.1) (2021-02-24)
+
+
+### Bug Fixes
+
+* Fix inputs typo ([3c4cea0](https://www.github.com/reima-ecom/netlify-plugin-refresh-algolia/commit/3c4cea0d2a3ea8079c0c7e57e43dfeeaccb7429c))
+
 ## 1.0.0 (2021-02-24)
 
 
