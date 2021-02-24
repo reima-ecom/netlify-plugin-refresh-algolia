@@ -1,5 +1,13 @@
 # Changelog
 
+### [1.0.5](https://www.github.com/reima-ecom/netlify-plugin-refresh-algolia/compare/v1.0.4...v1.0.5) (2021-02-24)
+
+
+### Bug Fixes
+
+* Add context check ([f18ab21](https://www.github.com/reima-ecom/netlify-plugin-refresh-algolia/commit/f18ab21852d1446ce893bbc60f5cf685402b5786))
+* Re-add require resolve ([37d09b3](https://www.github.com/reima-ecom/netlify-plugin-refresh-algolia/commit/37d09b343a788f100cb67d7f91ce221555fd2cba))
+
 ### [1.0.4](https://www.github.com/reima-ecom/netlify-plugin-refresh-algolia/compare/v1.0.3...v1.0.4) (2021-02-24)
 
 
