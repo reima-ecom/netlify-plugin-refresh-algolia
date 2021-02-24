@@ -3,23 +3,21 @@ const path = require("path");
 
 const updateIndex = async (appId, indexName, filePath, adminKey) => {
   const client = algoliasearch(appId, adminKey);
-
-  const resolvedPath = require.resolve(filePath, { paths: [process.cwd()] });
-  const objects = require(resolvedPath);
-
+  const objects = require(filePath);
   const index = client.initIndex(indexName);
   await index.replaceAllObjects(objects);
-
   console.log("Updated algolia index");
 };
 
 module.exports = {
   onSuccess: async (
-    { inputs, constants: { PUBLISH_DIR }, netlifyConfig: { context }, utils },
+    { inputs, constants: { PUBLISH_DIR }, netlifyConfig, utils },
   ) => {
-    if (context !== "production") {
-      console.log(`Skipping Algolia index refresh (context is ${context})`);
-    }
+    console.log(netlifyConfig);
+    // if (context !== "production") {
+    //   console.log(`Skipping Algolia index refresh (context is ${context})`);
+    //   return;
+    // }
 
     const { ALGOLIA_ADMIN_KEY } = process.env;
     const { appId, indexName, filePath } = inputs;
@@ -29,7 +27,7 @@ module.exports = {
       return;
     }
 
-    const fullPath = path.join('.', PUBLISH_DIR, filePath);
+    const fullPath = `./${PUBLISH_DIR}/${filePath}`;
     console.log(
       `Refreshing Algolia index ${indexName} (in ${appId}) with data from ${fullPath}`,
     );
@@ -38,7 +36,7 @@ module.exports = {
       await updateIndex(appId, indexName, fullPath, ALGOLIA_ADMIN_KEY);
     } catch (error) {
       console.log(error);
-      utils.build.failPlugin(`Could not update index: ${error.message}`);
+      utils.build.failPlugin("Could not update index", { error });
     }
   },
 };
