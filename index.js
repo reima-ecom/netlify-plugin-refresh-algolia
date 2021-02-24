@@ -29,7 +29,7 @@ module.exports = {
       return;
     }
 
-    const fullPath = path.join(PUBLISH_DIR, filePath);
+    const fullPath = path.join('.', PUBLISH_DIR, filePath);
     console.log(
       `Refreshing Algolia index ${indexName} (in ${appId}) with data from ${fullPath}`,
     );
