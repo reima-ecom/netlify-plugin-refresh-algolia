@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.3](https://www.github.com/reima-ecom/netlify-plugin-refresh-algolia/compare/v1.0.2...v1.0.3) (2021-02-24)
+
+
+### Bug Fixes
+
+* Make file path relative ([3cff730](https://www.github.com/reima-ecom/netlify-plugin-refresh-algolia/commit/3cff7301e9c45b2f0293b88f255a2f849fb9466c))
+
 ### [1.0.2](https://www.github.com/reima-ecom/netlify-plugin-refresh-algolia/compare/v1.0.1...v1.0.2) (2021-02-24)
 
 
