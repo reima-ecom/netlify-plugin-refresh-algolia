@@ -3,9 +3,12 @@ const path = require("path");
 
 const updateIndex = async (appId, indexName, filePath, adminKey) => {
   const client = algoliasearch(appId, adminKey);
-  const objects = require(filePath);
+  const resolvedPath = require.resolve(filePath, { paths: [process.cwd()] });
+  const objects = require(resolvedPath);
+
   const index = client.initIndex(indexName);
   await index.replaceAllObjects(objects);
+
   console.log("Updated algolia index");
 };
 
