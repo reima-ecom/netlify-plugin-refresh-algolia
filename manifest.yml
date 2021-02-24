@@ -1,0 +1,9 @@
+name: netlify-plugin-refresh-algolia
+inputs:
+  - name: filePath
+    description: Path (within publish directory) to json file that should be used to refresh the index
+    default: algolia.json
+  - name: appId
+    description: Algolia app id
+  - name: indexName
+    description: Algolia index
