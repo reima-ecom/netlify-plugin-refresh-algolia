@@ -15,14 +15,14 @@ const updateIndex = async (appId, indexName, filePath, adminKey) => {
 
 module.exports = {
   onSuccess: async (
-    { input, constants: { PUBLISH_DIR }, netlifyConfig: { context }, utils },
+    { inputs, constants: { PUBLISH_DIR }, netlifyConfig: { context }, utils },
   ) => {
     if (context !== "production") {
       console.log(`Skipping Algolia index refresh (context is ${context})`);
     }
 
     const { ALGOLIA_ADMIN_KEY } = process.env;
-    const { appId, indexName, filePath } = input;
+    const { appId, indexName, filePath } = inputs;
 
     if (!ALGOLIA_ADMIN_KEY) {
       utils.build.failPlugin("Environment variable ALGOLIA_ADMIN_KEY not set");
