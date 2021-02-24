@@ -1,0 +1,27 @@
+{
+  "name": "netlify-plugin-refresh-algolia",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reima-ecom/netlify-plugin-refresh-algolia.git"
+  },
+  "keywords": [
+    "netlify",
+    "netlify-plugin",
+    "algolia"
+  ],
+  "author": "Eric Selin (eric.selin@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reima-ecom/netlify-plugin-refresh-algolia/issues"
+  },
+  "homepage": "https://github.com/reima-ecom/netlify-plugin-refresh-algolia#readme",
+  "dependencies": {
+    "algoliasearch": "^4.8.5"
+  }
+}

@@ -5,5 +5,7 @@ inputs:
     default: algolia.json
   - name: appId
     description: Algolia app id
+    required: true
   - name: indexName
     description: Algolia index
+    required: true
