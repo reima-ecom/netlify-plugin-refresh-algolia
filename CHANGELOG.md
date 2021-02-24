@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.4](https://www.github.com/reima-ecom/netlify-plugin-refresh-algolia/compare/v1.0.3...v1.0.4) (2021-02-24)
+
+
+### Bug Fixes
+
+* Fix json require ([5ee3bf7](https://www.github.com/reima-ecom/netlify-plugin-refresh-algolia/commit/5ee3bf7088d0bc68aabe646a3cde5408a59e526c))
+
 ### [1.0.3](https://www.github.com/reima-ecom/netlify-plugin-refresh-algolia/compare/v1.0.2...v1.0.3) (2021-02-24)
 
 
