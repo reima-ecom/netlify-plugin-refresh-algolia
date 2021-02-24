@@ -2,7 +2,7 @@ const algoliasearch = require("algoliasearch");
 const path = require("path");
 
 const updateIndex = async (appId, indexName, filePath, adminKey) => {
-  const client = algoliasearch(appId, ALGOLIA_ADMIN_KEY);
+  const client = algoliasearch(appId, adminKey);
 
   const resolvedPath = require.resolve(filePath, { paths: [process.cwd()] });
   const objects = require(resolvedPath);
